@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christory - Partage d'histoires</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Christory - Un site pour partager vos histoires.">
+    <meta name="keywords" content="histoires, partage, communautée, écrivains">
+    <meta name="author" content="Christory">
+
+</head>
+<body>
+    <header>
+        <h1>Christory</h1>
+        <p>Le lieu où les histoires prennent vie. Partagez, commentez, et faites aimer mes histoires !</p>
+    </header>
+
+    <main>
+        <section class="story">
+            <h2>BIENVENUE SUR CHRISTORY</h2>
+            <p>Je m’appelle Christian, passionné par la lecture et l’écriture, j’ai créé ce site pour partager avec vous mes histoires. Que vous soyez amateur de récits captivants, d’aventures fantastiques ou de moments inspirants, vous êtes au bon endroit. Ici, chaque histoire est une invitation à voyager, réfléchir, et s’évader.
+
+                Rejoignez-moi dans cette aventure littéraire, n’hésitez pas à commenter, partager vos impressions et même soumettre vos propres récits. Ensemble, faisons vivre les histoires et inspirons-nous les uns les autres !
+                
+                Bonne lecture et à bientôt dans les commentaires !</p>
+            <div class="interaction">
+                <button class="like-btn">👍</button> <span class="like-count">0</span>
+                <button class="dislike-btn">👎</button> <span class="dislike-count">0</span>
+            </div>
+            <div class="comments">
+                <h3>Commentaires</h3>
+                <ul id="comment-list">
+                    <!-- Les commentaires apparaîtront ici -->
+                </ul>
+                <textarea id="comment-box" placeholder="Ajoutez un commentaire"></textarea>
+                <button id="submit-comment">Poster</button>
+            </div>
+            <div class="share">
+                <p>Partagez cette histoire :</p>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://christory.com" target="_blank">Partager sur Facebook</a>
+                <a href="https://twitter.com/share?url=https://christory.com" target="_blank">Partager sur Twitter</a>
+            </div>
+        </section>
+
+        <!-- Ajoute d'autres histoires ici -->
+    </main>
+
+    <script src="script.js"></script>
+
+
+    </header>
+    
+    <!-- Formulaires d'inscription et de connexion -->
+    <section>
+        <h2>Inscription</h2>
+        <input type="email" id="register-email" placeholder="Email">
+        <input type="password" id="register-password" placeholder="Mot de passe">
+        <button id="register-btn">S'inscrire</button>
+    </section>
+
+    <section>
+        <h2>Connexion</h2>
+        <input type="email" id="login-email" placeholder="Email">
+        <input type="password" id="login-password" placeholder="Mot de passe">
+        <button id="login-btn">Se connecter</button>
+    </section>
+
+    <!-- Scripts Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/9.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.9.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.9.1/firebase-firestore.js"></script>
+    <script>
+        // Configurer Firebase
+        const firebaseConfig = {
+            apiKey: "AIzaSyB5VFTrADD_NhDgCEmioZhqYpvTIJySvuI",
+            authDomain: "christory-c9021.firebaseapp.com",
+            projectId: "christory-c9021",
+            storageBucket: "christory-c9021.appspot.com",
+            messagingSenderId: "820265798056",
+            appId: "1:820265798056:web:6fdefd679add639ba7359d"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="script.js" defer></script> 
+</body>
+</html>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
+<section>
+    <h2>Soumettre une histoire</h2>
+    <input type="text" id="story-title" placeholder="Titre de l'histoire">
+    <textarea id="story-content" placeholder="Écris ton histoire ici..."></textarea>
+    <button id="submit-story-btn">Soumettre l'histoire</button>
+</section>
+
+<section id="stories-section">
+    <h2>Histoires</h2>
+    <div id="stories-list"></div>
+</section>
+<footer>
+    <p>&copy; 2024 Christory. Tous droits réservés.</p>
+</footer>
+
+<script src="script.js"></script>
+
+
+</header>
+<div class="comments-section">
+    <h4>Commentaires :</h4>
+    <div id="comments-list"></div>
+    <textarea id="comment-content" placeholder="Écrire un commentaire..."></textarea>
+    <button class="submit-comment-btn">Soumettre un commentaire</button>
+</div>
+<span class="like-count">0</span>
+<button class="like-btn" data-id="${doc.id}">J'aime</button>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Profil Utilisateur</title>
+</head>
+<body>
+    <header>
+        <h1>Mon Profil</h1>
+    </header>
+    <main>
+        <section id="user-profile">
+            <h2>Bienvenue, <span id="user-email"></span></h2>
+            <h3>Mes Histoires</h3>
+            <div id="user-stories"></div>
+        </section>
+    </main>
+    <script src="profile.js"></script>
+</body>
+</html>
+<section id="notifications-section">
+    <h3>Notifications</h3>
+    <div id="notifications-list"></div>
+</section>
